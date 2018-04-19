@@ -1,0 +1,15 @@
+
+# Xcode user files
+xcuserdata
+*.xccheckout
+*.xcuserstate
+ROBOTS.jar
+.idea
+build.pyc
+recipe.pyc
+swift_gen.pyc
+SASBIKit/build/Release-Unicorn-iphoneos/SASBIKit.framework
+SASBIKit/build
+SASBIKit/docs
+playpens.pyc
+Samples/Frameworks/SASBIKit.framework

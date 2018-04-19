@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SASKitCustomApp/SASKitCustomApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SASKitFullscreen/SASKitFullscreen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SASKitMasterDetail/SASKitMasterDetail.xcodeproj">
+   </FileRef>
+</Workspace>
