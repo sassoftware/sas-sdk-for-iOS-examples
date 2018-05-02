@@ -22,6 +22,8 @@ In order to build for a physical device, the bundle ID for the projects need to 
 ### Personalize - [SASKitCustomApp](https://github.com/sassoftware/sas-sdk-for-iOS-examples/tree/master/SASKitCustomApp)
 The first step many users want to take is to personalize the exising SAS Mobile BI app by building a mobile app that uses their app name and icon. This sample demonstrates deriving an application delegate from SASApplicationDelegate and adding your app name and icon. 
 
+[Get Started](docs/GettingStarted_Personalize.md) creating your personalized mobile app.
+
 ### Pre-Configure
 Pre-configure your server connections and report subscriptions so your users don't have to perform those tasks manually. For a pre-configured connection and set of reports auto-downlaoded, you can replace ***sas-sdk-servers.json*** in the framework with your own server configuration. Pre-configuration can be combined with any of the other three scenarios and has been available for some time with the Mobile Device Management(MDM) distribution.
 
