@@ -8,8 +8,6 @@ The first step many users want to take is to personalize the existing SAS Mobile
 
 <img align="left" src="images/GS_P-icon.png">
 
-
-
 ### After building your personalized app, the icon you added will be displayed.
 
 <img align="left" width="400" height="400" src="images/GS_P-app.png">
