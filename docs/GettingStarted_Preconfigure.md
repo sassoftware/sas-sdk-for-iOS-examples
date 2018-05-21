@@ -33,59 +33,82 @@ Benefits of updating the json file -
 Benefits of writing code:
 * Support custom server connections and report subscriptions based on user information or other logic with your mobile app.
 
-***Specify server connection URL and report ids.***
+***Create handleReportsAvailable() to contain app serve & report preconfiguration functionality.***
 ```Perl
-class MasterViewController: UITableViewController, AnnotationHelperDelegate, ReportDetailsCapabilitiesDelegate, SASManagerDelegate
+class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
 {
-    // SAS public sample report server
-    let url : URL = URL(string: "https://tbub.sas.com:443")!
-    
-    // UUIDs of reports on sample server
-    let reports : [String : String ] = ["Warranty Analysis" : "faca01f6-c631-4cbf-b336-6ba186dc632e" ,
-                                        "Capital Campaign"  : "03db38a7-ff39-460e-9aca-3ee108c10140" ,
-                                        "Retail Insights"   : "1ccd88c8-38a6-4473-90e0-8bdb447510a4" ,
-                                        "Water Consumption and Monitoring" : "cd4205df-44a8-448a-a174-765f89abe058"]
+    //MARK: Notification Listeners
+    func handleReportsAvailable()
+    {
+```
+***Specify server connection URL and report names & ids.***
+```Perl
+        // SAS public sample report server
+        let url : URL = URL(string: "https://tbub.sas.com:443")!
+        
+        // UUIDs of reports on sample server
+        let reports : [String : String ] = ["Warranty Analysis" : "faca01f6-c631-4cbf-b336-6ba186dc632e" ,
+                                            "Capital Campaign"  : "03db38a7-ff39-460e-9aca-3ee108c10140" ,
+                                            "Retail Insights"   : "1ccd88c8-38a6-4473-90e0-8bdb447510a4" ,
+                                            "Water Consumption and Monitoring" : "cd4205df-44a8-448a-a174-765f89abe058"]      
 ```
 
-***Add addReportsDynamically() function to contain preconfiguration server functionality. Verify server connection is valid.***
+***Verify server connection is valid, login, and subscribe to the report "Retail Insights."***
 ```Perl
-    var reportDetailsViewController : UIViewController? = nil
-
-    var reportList : [SASReport] = Array()
-    
-    func addReportsDynamically()
-    {
         // attempt server verification
         SASManager.shared.verifySASServer( url )
         { (server, error) in
-```
-***Iterate through report unique identifiers (UUIDs).***
+            
+            if (self.USE_GUESTMODE)
+            {
+                server?.guestMode = true
+            }
+            else
+            {
+                server?.userid = ""
+                server?.password = ""
+            }
 
-```Perl
-       for (_ , reportUUID) in self.reports
-       {
-           // subscribe reports
-           let descriptor : SASReportDescriptor = SASReportDescriptor(identifier: reportUUID)
-           server?.subscribe( descriptor: descriptor )
-           { (report, error ) in
-               if (report != nil && error == nil)
-               {
-                   if (self.listContains(list: self.reportList, uniqueIdentifier: (report?.identifier)!) == false)
-                   {
-                       self.reportList.append(report!)
-                   }
-```
-***Override the viewDidLoad() function and call addReportsDynamically().***
+            server?.connect
+            { (error) in
+                
+                var descriptor : SASReportDescriptor? = nil
 
-```Perl
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        SASManager.initialize(delegate: self)
-        {_ in
-            self.addReportsDynamically()
+                let reportUUID : String = reports["Retail Insights"]!
+                descriptor = SASReportDescriptor(identifier: reportUUID)
+                
+                server?.subscribe(descriptor: descriptor!)
+                { (report, error ) in
+                    
+                    if report != nil
+                    {
+                        let vc : SASReportViewController = (report?.createViewController())!
+                        self.window?.rootViewController = vc as? UIViewController;
+                    }
+                    else
+                    {
+                        print(error as Any)
+                    }
+                }
+
+            }
         }
     }
 ```
+***Call handleReportsAvailable() as part of the UIApplicationDelegate life-cycle method - application().***
+```
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    {
+        SASManager.initialize(delegate: self)
+        {_ in
+            self.handleReportsAvailable()
+        }
+        
+        // Override point for customization after application launch.
+        return true
+    }
+```
+
+
 
 
