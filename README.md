@@ -1,5 +1,5 @@
 #  SASKit-Samples
-SASKit-Samples are XCode projects that demonstrate using the SASKit framework enabling iOS developers to build customized apps that include content from [SAS® Visual Analytics](https://www.sas.com/en_us/software/visual-analytics.html). The SAS SDK lets you build  mobile apps that you can personalize, pre-configure, customize, and manage to meet your exact requirements.
+SASKit-Samples are XCode projects that demonstrate using the SASKit framework enabling iOS developers to build customized apps that include content from [SAS® Visual Analytics](https://www.sas.com/en_us/software/visual-analytics.html). The SAS SDK lets you build  mobile apps that you can personalize, preconfigure, customize, and manage to meet your exact requirements.
 
 
 ## Getting SASKit Framework
