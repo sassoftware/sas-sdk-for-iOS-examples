@@ -5,12 +5,12 @@ The first step many users want to take is to personalize the existing SAS Mobile
 
 ## Simply add your icon to the Xcode project:
 
-<img align="left" src="images/GS_P-icon.png"> <br/>
+![Icons in Xcode project](images/GS_P-icon.png)
 *Icons in Xcode project*
 
 
 
 ## After building your personalized app, the icon you added will be displayed.
 
-<img align="left" width="400" height="400" src="images/GS_P-app.png" /> <br/>
+![Your custom mobile app deployed with your icon](images/GS_P-app.png)
 *Your custom mobile app deployed with your icon* 
