@@ -20,32 +20,17 @@ In order to build for a physical device, the bundle ID for the projects need to 
 ## Scenarios addressed through the Sample Apps
 
 ### Personalize - [SASKitCustomApp](https://github.com/sassoftware/sas-sdk-for-iOS-examples/tree/master/SASKitCustomApp)
-The first step many users want to take is to personalize the exising SAS Mobile BI app by building a mobile app that uses their app name and icon. This sample demonstrates deriving an application delegate from SASApplicationDelegate and adding your app name and icon. 
+The first step app developers using the SAS SDK may want to take is to personalize the exising SAS Mobile BI app by building a mobile app that uses their app name and icon. This sample demonstrates deriving an application delegate from SASApplicationDelegate and adding your app name and icon. 
 
 [Get Started](docs/GettingStarted_Personalize.md) creating your personalized mobile app.
 
-### Pre-Configure
-Pre-configure your server connections and report subscriptions so your users don't have to perform those tasks manually. For a pre-configured connection and set of reports auto-downlaoded, you can replace ***sas-sdk-servers.json*** in the framework with your own server configuration. Pre-configuration can be combined with any of the other three scenarios and has been available for some time with the Mobile Device Management(MDM) distribution.
+### Preconfigure
+The next step may be to preconfigure the server connections and report subscriptions within your mobile apps so your users don't have to perform those tasks manually. 
 
-```Perl
-{
-    "servers": [
-    {
-        "reportPaths": [
-                        "/reports/reports/faca01f6-c631-4cbf-b336-6ba186dc632e",
-                        "/reports/reports/1ccd88c8-38a6-4473-90e0-8bdb447510a4",
-                        "/reports/reports/03db38a7-ff39-460e-9aca-3ee108c10140",
-                        "/reports/reports/cd4205df-44a8-448a-a174-765f89abe058"
-                        ],
-        "serverHostName": "tbub.sas.com",
-        "serverPort": "443",
-        "useGuestMode": "true",
-        "useSSL": "true",
-        "serverDescription" : "\_i18n:sas_demo_server",
-        "isDemo" : "true"
-    }]
-}
-```
+Preconfiguration can be combined with any of the other three scenarios and has been available for some time with the Mobile Device Management(MDM) distribution.
+
+[Get Started](docs/GettingStarted_Preconfigure.md) preconfiguring your mobile app.
+
 
 ### Customize - [SASKitMasterDetail](https://github.com/robbypowell/sas-sdk-for-iOS-examples/tree/master/SASKitMasterDetail)
 Creating a fully customized mobile app lets you include both SAS Visual Analytics reports and any other content and capabilities that tie into your organizational goals, processes, and projects. An example of a custom mobile app build with the SAS SDK is [GatherIQ](https://gatheriq.analytics/), a free app that is part of the **SAS Data for Good** program. This app is available in the App Store and Google Play.
