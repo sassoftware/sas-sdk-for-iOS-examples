@@ -2,8 +2,20 @@
 //  MasterViewController.swift
 //  SASKitMasterDetail
 //
-//  Copyright © 2017 SAS Institute. All rights reserved.
+
+// Copyright 2018 SAS Institute Inc.
 //
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 import UIKit
 
@@ -11,7 +23,7 @@ import SASKit
 
 let USE_GUESTMODE = true
 
-class MasterViewController: UITableViewController, AnnotationHelperDelegate, ReportDetailsCapabilitiesDelegate, SASManagerDelegate
+class MasterViewController: UITableViewController, SASManagerDelegate
 {
     // SAS public sample report server
     let url : URL = URL(string: "https://tbub.sas.com:443")!
@@ -30,7 +42,7 @@ class MasterViewController: UITableViewController, AnnotationHelperDelegate, Rep
         return "1"
     }
     
-    func showAlert(withTitle: String!, message: String!, buttonTitle: String!) {
+    func showAlert(withTitle: String?, message: String?, buttonTitle: String?) {
         
     }
     
@@ -247,86 +259,6 @@ class MasterViewController: UITableViewController, AnnotationHelperDelegate, Rep
     {
     }
     
-    
-    func detailsViewAction(_ id: AnyObject)
-    {
-        (reportDetailsViewController as! SASReportViewController).setCapabilitiesHelperDelegate(self)
-        (reportDetailsViewController as! ReportDetailsViewDelegate).showDetailsPanel()
-    }
-    
-    func annotateAction(_ id: AnyObject)
-    {
-        // invoke annotation mode
-        if let split = self.splitViewController
-        {
-            let controllers = split.viewControllers
-            let annotationViewController : SASKitAnnotationViewController = getAnnotationController(reportDetailsViewController! as! SASReportViewController, helper: self)
-            let annoNavController = UINavigationController(rootViewController: annotationViewController as! UIViewController)
-            let detailsNavController = controllers[controllers.count-1] as! UINavigationController
-            annoNavController.modalPresentationStyle = .currentContext
-            detailsNavController.present(annoNavController, animated: true)
-        }
-    }
-    
-    public func onAnnotationWillClose(_ annotatedImage: UIImage!) -> Bool
-    {
-        return true;
-    }
-    
-    public func onAnnotationDidClose()
-    {
-        // displayMessage("Thanks for using the annotation interface.")
-    }
-    
-    // MARK: ReportDetailsCapabilitiesDelegate methods
-    public func supportsMarqueeHeader() -> Bool
-    {
-        return true
-    }
-    
-    public func supportsSections() -> Bool
-    {
-        return true
-    }
-    
-    public func supportsTextDetails() -> Bool
-    {
-        return false
-    }
-    
-    public func supportsRefresh() -> Bool
-    {
-        return false
-    }
-    
-    public func supportsAction() -> Bool
-    {
-        return false
-    }
-    
-    public func supportsFavorite() -> Bool
-    {
-        return false
-    }
-    
-    public func viewForMarqueeHeader() -> UIView?
-    {
-        // return nil // use default header contents if return nil
-        let imgContainer : UIImageView = UIImageView(image: UIImage(named: "CustomDetailsHeader", in:SwiftGoodies.CURRENT_BUNDLE(type(of: self))))
-        var r : CGRect = imgContainer.bounds
-        r.origin.y = r.size.height - 26
-        r.origin.x = 5
-        r.size.width = r.size.width - 10
-        r.size.height = 26
-        let label = UILabel(frame: r)
-        label.autoresizingMask  = UIViewAutoresizing.flexibleWidth
-        label.font = UIFont(name: label.font.fontName, size: 20.0)
-        label.textColor = UIColor.white
-        label.text = reportDetailsViewController?.title
-        imgContainer.addSubview(label)
-        
-        return imgContainer 
-    }
 
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -345,15 +277,6 @@ class MasterViewController: UITableViewController, AnnotationHelperDelegate, Rep
                     navController.pushViewController(reportDetailsViewController!, animated: true)
                                                      
                     reportDetailsViewController?.title = report?.name
-                    reportDetailsViewController?.navigationItem.setRightBarButtonItems([UIBarButtonItem.init(title: "Annotate",
-                                                                                                             style: .plain,
-                                                                                                             target: self,
-                                                                                                             action: #selector(MasterViewController.annotateAction(_:))),
-                                                                                        UIBarButtonItem.init(title: "Details",
-                                                                                                             style: .plain,
-                                                                                                             target: self,
-                                                                                                             action: #selector(MasterViewController.detailsViewAction(_:))),
-                                                                                        ], animated: true)
                     
                     // keep report from going under the navigation bar
                     navController.navigationBar.isTranslucent = false
