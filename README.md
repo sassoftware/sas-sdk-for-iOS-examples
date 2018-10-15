@@ -5,7 +5,7 @@ SASKit-Samples are XCode projects that demonstrate using the SASKit framework en
 ## Getting SASKit Framework
 Access the SASKit installer (SASKit.pkg) from the [developer.sas.com Mobile SDK site](https://developer.sas.com/guides/mobile-sdk.html). This site also includes access to the [SASKit Documentation](https://developer.sas.com/sdk/mobile/iOS/doc/8.22/). After running the installation the SASKit framework is installed in "/Library/Frameworks".
 
-For information, advice, and questions on the use of SAS Mobile SDKs please start with the [SAS Visual Analytics online community](https://communities.sas.com/Visual-Analytics).
+For information, advice, and questions on the use of SAS SDKs please start with the [SAS Visual Analytics online community](https://communities.sas.com/Visual-Analytics).
 
 
 ## Open XCode Workspace
@@ -20,7 +20,7 @@ In order to build for a physical device, the bundle ID for the projects need to 
 ## Scenarios addressed through the Sample Apps
 
 ### Personalize - [SASKitCustomApp](https://github.com/sassoftware/sas-sdk-for-iOS-examples/tree/master/SASKitCustomApp)
-The first step app developers using the SAS SDK may want to take is to personalize the exising SAS Mobile BI app by building a mobile app that uses their app name and icon. This sample demonstrates deriving an application delegate from SASApplicationDelegate and adding your app name and icon. 
+The first step app developers using the SAS SDK may want to take is to personalize the exising SAS Visual Analytics App by building a mobile app that uses their app name and icon. This sample demonstrates deriving an application delegate from SASApplicationDelegate and adding your app name and icon. 
 
 [Get Started](docs/GettingStarted_Personalize.md) creating your personalized mobile app.
 
