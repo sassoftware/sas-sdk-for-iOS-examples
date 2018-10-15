@@ -27,13 +27,13 @@ The first step app developers using the SAS SDK may want to take is to personali
 ### Preconfigure
 The next step may be to preconfigure the server connections and report subscriptions within your mobile apps so your users don't have to perform those tasks manually. 
 
-Preconfiguration can be combined with any of the other three scenarios and has been available for some time with the Mobile Device Management(MDM) distribution.
+Preconfiguration can be combined with any of the other three scenarios and has been available for some time with the Mobile Device Management (MDM) distribution.
 
 [Get Started](docs/GettingStarted_Preconfigure.md) preconfiguring your mobile app.
 
 
 ### Customize - [SASKitMasterDetail](https://github.com/robbypowell/sas-sdk-for-iOS-examples/tree/master/SASKitMasterDetail)
-Creating a fully customized mobile app lets you include both SAS Visual Analytics reports and any other content and capabilities that tie into your organizational goals, processes, and projects. An example of a custom mobile app build with the SAS SDK is [GatherIQ](https://gatheriq.analytics/), a free app that is part of the **SAS Data for Good** program. This app is available in the App Store and Google Play.
+Creating a fully customized mobile app lets you include both SAS Visual Analytics reports and any other content and capabilities that tie into your organizational goals, processes, and projects. An example of a custom mobile app build with the SAS SDK is [GatherIQ](https://gatheriq.analytics/), a free app that is part of the [**SAS Data for Good** program](https://www.sas.com/en_us/data-for-good.html). This app is available in the App Store and Google Play.
 
 ### Manage 
 If you manage and secure your mobile devices with a Mobile Device Management (MDM) solution, you can integrate your mobile apps with your MDM solution by using the SAS SDK. This is done by overriding File System, Network and Keychain access:
