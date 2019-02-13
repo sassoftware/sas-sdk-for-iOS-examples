@@ -2,10 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SASKitCustomApp/SASKitCustomApp.xcodeproj">
+      location = "group:SASKitFullscreen/SASKitFullscreen.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SASKitFullscreen/SASKitFullscreen.xcodeproj">
+      location = "group:SASKitMasterDetail/../SASKitServerConfig/SASKitServerConfig.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SASKitCustomApp/SASKitCustomApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SASKitMasterDetail/SASKitMasterDetail.xcodeproj">

@@ -26,7 +26,7 @@ import SASKit
 class CustomMobileBIAppDelegate : SASApplicationDelegate
 {
     
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         // Override point for customization after application launch.
         let ret : Bool = super.application(application, didFinishLaunchingWithOptions: launchOptions)

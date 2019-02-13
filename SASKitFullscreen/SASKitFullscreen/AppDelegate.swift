@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
                     
                     if report != nil
                     {
-                        let vc : SASReportViewController = (report?.createViewController())!
+                        let vc : SASReportViewController = (report?.createViewController(nil))!
                         self.window?.rootViewController = vc as? UIViewController;
                     }
                     else
@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
     }
 
     // MARK: UIApplicationDelegate life-cycle methods.
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         SASManager.initialize(delegate: self)
         {_ in
@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
         return true
     }
     
-    func showAlert(withTitle title: String!, message: String!, buttonTitle label: String!)
+    func showAlert(withTitle title: String?, message: String?, buttonTitle label: String?)
     {
         
     }

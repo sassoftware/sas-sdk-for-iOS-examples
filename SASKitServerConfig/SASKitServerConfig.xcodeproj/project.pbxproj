@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5E60472207323100D034B0 /* SASKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E60462207323100D034B0 /* SASKit.framework */; };
+		6B5E60482207323100D034B0 /* SASKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E60462207323100D034B0 /* SASKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9015BE2A20D7FEA700F271D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9015BE2920D7FEA700F271D2 /* AppDelegate.swift */; };
 		9015BE2C20D7FEA700F271D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9015BE2B20D7FEA700F271D2 /* ViewController.swift */; };
 		9015BE2F20D7FEA700F271D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015BE2D20D7FEA700F271D2 /* Main.storyboard */; };
 		9015BE3120D7FEA700F271D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9015BE3020D7FEA700F271D2 /* Assets.xcassets */; };
 		9015BE3420D7FEA700F271D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9015BE3220D7FEA700F271D2 /* LaunchScreen.storyboard */; };
-		9015BE3E20D8012200F271D2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9015BE3D20D8012200F271D2 /* Settings.bundle */; };
-		9015BE3F20D8012D00F271D2 /* SASKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9015BE3B20D8011800F271D2 /* SASKit.framework */; };
-		9015BE4020D8012D00F271D2 /* SASKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9015BE3B20D8011800F271D2 /* SASKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9015BE4020D8012D00F271D2 /* SASKit.framework in Embed Frameworks */,
+				6B5E60482207323100D034B0 /* SASKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B5E60462207323100D034B0 /* SASKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SASKit.framework; path = ../install/SASKit.framework; sourceTree = "<group>"; };
 		9015BE2620D7FEA700F271D2 /* SASKitServerConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SASKitServerConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9015BE2920D7FEA700F271D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9015BE2B20D7FEA700F271D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,8 +39,6 @@
 		9015BE3020D7FEA700F271D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9015BE3320D7FEA700F271D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9015BE3520D7FEA700F271D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9015BE3B20D8011800F271D2 /* SASKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SASKit.framework; sourceTree = "<group>"; };
-		9015BE3D20D8012200F271D2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9015BE3F20D8012D00F271D2 /* SASKit.framework in Frameworks */,
+				6B5E60472207323100D034B0 /* SASKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +56,7 @@
 		9015BE1D20D7FEA600F271D2 = {
 			isa = PBXGroup;
 			children = (
-				9015BE3D20D8012200F271D2 /* Settings.bundle */,
-				9015BE3B20D8011800F271D2 /* SASKit.framework */,
+				6B5E60462207323100D034B0 /* SASKit.framework */,
 				9015BE2820D7FEA700F271D2 /* SASKitServerConfig */,
 				9015BE2720D7FEA700F271D2 /* Products */,
 			);
@@ -114,11 +111,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "SAS Institute";
 				TargetAttributes = {
 					9015BE2520D7FEA600F271D2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,7 +144,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9015BE3E20D8012200F271D2 /* Settings.bundle in Resources */,
 				9015BE3420D7FEA700F271D2 /* LaunchScreen.storyboard in Resources */,
 				9015BE3120D7FEA700F271D2 /* Assets.xcassets in Resources */,
 				9015BE2F20D7FEA700F271D2 /* Main.storyboard in Resources */,
@@ -201,6 +198,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -208,6 +206,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -235,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -258,6 +257,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -265,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -286,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -301,13 +302,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../install",
 				);
 				INFOPLIST_FILE = SASKitServerConfig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.your-domain.SASKitServerConfig";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -319,13 +320,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../install",
 				);
 				INFOPLIST_FILE = SASKitServerConfig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.your-domain.SASKitServerConfig";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

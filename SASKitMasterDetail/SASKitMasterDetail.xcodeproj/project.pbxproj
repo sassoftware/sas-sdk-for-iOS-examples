@@ -12,9 +12,19 @@
 		36A4206B1E8AB141006A7611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A420691E8AB141006A7611 /* Main.storyboard */; };
 		36A4206D1E8AB141006A7611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A4206C1E8AB141006A7611 /* Assets.xcassets */; };
 		36A420701E8AB141006A7611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A4206E1E8AB141006A7611 /* LaunchScreen.storyboard */; };
-		9095CB0520615B8100985772 /* SASKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9095CB0420615B8100985772 /* SASKit.framework */; };
-		9095CB0620615B8100985772 /* SASKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9095CB0420615B8100985772 /* SASKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B5E604122072E5800D034B0 /* SASKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E604022072E5800D034B0 /* SASKit.framework */; };
+		6B5E604222072E5800D034B0 /* SASKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E604022072E5800D034B0 /* SASKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B5E604D2207335800D034B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B5E60492207335800D034B0 /* SASKitServerConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9015BE2620D7FEA700F271D2;
+			remoteInfo = SASKitServerConfig;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9095CB0720615B8100985772 /* Embed Frameworks */ = {
@@ -23,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9095CB0620615B8100985772 /* SASKit.framework in Embed Frameworks */,
+				6B5E604222072E5800D034B0 /* SASKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +48,8 @@
 		36A4206C1E8AB141006A7611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A4206F1E8AB141006A7611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36A420711E8AB141006A7611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9095CB0420615B8100985772 /* SASKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SASKit.framework; sourceTree = "<group>"; };
+		6B5E604022072E5800D034B0 /* SASKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SASKit.framework; path = ../install/SASKit.framework; sourceTree = "<group>"; };
+		6B5E60492207335800D034B0 /* SASKitServerConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SASKitServerConfig.xcodeproj; path = ../SASKitServerConfig/SASKitServerConfig.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9095CB0520615B8100985772 /* SASKit.framework in Frameworks */,
+				6B5E604122072E5800D034B0 /* SASKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +67,8 @@
 		36A420571E8AB141006A7611 = {
 			isa = PBXGroup;
 			children = (
-				9095CB0420615B8100985772 /* SASKit.framework */,
+				6B5E60492207335800D034B0 /* SASKitServerConfig.xcodeproj */,
+				6B5E604022072E5800D034B0 /* SASKit.framework */,
 				36A420621E8AB141006A7611 /* SASKitMasterDetail */,
 				36A420611E8AB141006A7611 /* Products */,
 			);
@@ -81,6 +93,14 @@
 				36A420711E8AB141006A7611 /* Info.plist */,
 			);
 			path = SASKitMasterDetail;
+			sourceTree = "<group>";
+		};
+		6B5E604A2207335800D034B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B5E604E2207335800D034B0 /* SASKitServerConfig.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,11 +131,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "SAS Institute";
 				TargetAttributes = {
 					36A4205F1E8AB141006A7611 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -131,12 +152,28 @@
 			mainGroup = 36A420571E8AB141006A7611;
 			productRefGroup = 36A420611E8AB141006A7611 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B5E604A2207335800D034B0 /* Products */;
+					ProjectRef = 6B5E60492207335800D034B0 /* SASKitServerConfig.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				36A4205F1E8AB141006A7611 /* SASKitMasterDetail */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B5E604E2207335800D034B0 /* SASKitServerConfig.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SASKitServerConfig.app;
+			remoteRef = 6B5E604D2207335800D034B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		36A4205E1E8AB141006A7611 /* Resources */ = {
@@ -192,15 +229,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -243,15 +288,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -287,15 +340,16 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../install",
 				);
 				INFOPLIST_FILE = SASKitMasterDetail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.your-domain.SASKitMasterDetail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -308,15 +362,16 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../install",
 				);
 				INFOPLIST_FILE = SASKitMasterDetail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.your-domain.SASKitMasterDetail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

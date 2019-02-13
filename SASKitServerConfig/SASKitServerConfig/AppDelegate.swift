@@ -48,7 +48,7 @@ class AppDelegate : SASApplicationDelegate
         return jsonData
     }
     
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         let ret : Bool = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         self.applicationDidBecomeActive(application)

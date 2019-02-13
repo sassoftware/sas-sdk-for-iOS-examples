@@ -103,8 +103,8 @@ class MasterViewController: UITableViewController, SASManagerDelegate
         // sort dynamically loaded report list
         self.reportList.sort(by:
             {
-                let name1 = $0.name!
-                let name2 = $1.name!
+                let name1 = $0.name
+                let name2 = $1.name
                 if (name1 < name2)
                 {
                     return true
@@ -272,7 +272,7 @@ class MasterViewController: UITableViewController, SASManagerDelegate
                 {
                     let navController = segue.destination as! UINavigationController
      
-                    reportDetailsViewController = report?.createViewController() as? UIViewController
+                    reportDetailsViewController = report?.createViewController(nil) as? UIViewController
 
                     navController.pushViewController(reportDetailsViewController!, animated: true)
                                                      
