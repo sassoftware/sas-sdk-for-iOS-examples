@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASRe
     var server:SASServer?
     func handleSASManagerReady()
     {
-        SASManager.shared.verifySASServer(URL(string: "http://your.server.com")!)
+        let serverDescriptor = SASServerDescriptor(URL(string: "http://your.server.com")!, serverUserid: "<username>")
+        serverDescriptor.password = "<password>"
+
+        SASManager.shared.verifySASServer(serverDescriptor)
         { (server, error) in
             self.server = server
-            server?.userid = "<username>"
-            server?.password = "<password>"
             server?.connect({ (error) in
                 let descriptor = SASReportDescriptor(identifier: "########-####-####-####-############")
                 server?.subscribe(descriptor: descriptor, completion:

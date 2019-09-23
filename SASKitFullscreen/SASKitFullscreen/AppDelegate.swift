@@ -24,7 +24,6 @@ import SASKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
 {
-    let USE_GUESTMODE = true
     let USE_UUID_DESCRIPTOR = true   
     
     func getApplicationName() -> String {
@@ -50,18 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
                                             "Water Consumption and Monitoring" : "cd4205df-44a8-448a-a174-765f89abe058"]
         
         // attempt server verification
-        SASManager.shared.verifySASServer( url )
+        SASManager.shared.verifySASServer(SASServerDescriptor(url))
         { (server, error) in
-            
-            if (self.USE_GUESTMODE)
-            {
-                server?.guestMode = true
-            }
-            else
-            {
-                server?.userid = ""
-                server?.password = ""
-            }
 
             server?.connect
             { (error) in

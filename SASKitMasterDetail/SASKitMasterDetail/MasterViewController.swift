@@ -21,8 +21,6 @@ import UIKit
 
 import SASKit
 
-let USE_GUESTMODE = true
-
 class MasterViewController: UITableViewController, SASManagerDelegate
 {
     // SAS public sample report server
@@ -53,21 +51,11 @@ class MasterViewController: UITableViewController, SASManagerDelegate
     func addReportsDynamically()
     {
         // attempt server verification
-        SASManager.shared.verifySASServer( url )
+        SASManager.shared.verifySASServer( SASServerDescriptor(url) )
         { (server, error) in
             
             if (error == nil && server != nil)
             {
-                if (USE_GUESTMODE)
-                {
-                    server?.guestMode = true
-                }
-                else
-                {
-                    server?.userid = ""
-                    server?.password = ""
-                }
-                
                 server?.connect
                 { (error) in
                     if (error == nil)
