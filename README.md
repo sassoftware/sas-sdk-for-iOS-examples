@@ -3,7 +3,7 @@ SASKit-Samples are XCode projects that demonstrate using the SASKit framework en
 
 
 ## Getting SASKit Framework
-Access the SASKit installer (SASKit.pkg) from the [developer.sas.com Mobile SDK site](https://developer.sas.com/guides/mobile-sdk.html). This site also includes access to the [SASKit Documentation](https://developer.sas.com/sdk/mobile/iOS/doc/8.22/). After running the installation the SASKit framework is installed in "/Library/Frameworks".
+Access the SASKit installer (SASKit.pkg) from the [developer.sas.com Mobile SDK site](https://developer.sas.com/guides/mobile-sdk.html). This site also includes access to the [SASKit Documentation](https://developer.sas.com/sdk/mobile/iOS/doc/current/api-doc/). After running the installation the SASKit framework is installed in "/Library/Frameworks".
 
 For information, advice, and questions on the use of SAS SDKs please start with the [SAS Visual Analytics online community](https://communities.sas.com/Visual-Analytics).
 
@@ -37,7 +37,7 @@ Creating a fully customized mobile app lets you include both SAS Visual Analytic
 
 ### Manage 
 If you manage and secure your mobile devices with a Mobile Device Management (MDM) solution, you can integrate your mobile apps with your MDM solution by using the SAS SDK. This is done by overriding File System, Network and Keychain access:
- * [SASFileSystemDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/8.22/Protocols/SASFileSystemDelegate.html)
- * [SASKeychainDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/8.22/Protocols/SASKeychainDelegate.html)
- * [SASNetworkDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/8.22/Protocols/SASNetworkDelegate.html)
+ * [SASFileSystemDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/current/api-doc//Protocols/SASFileSystemDelegate.html)
+ * [SASKeychainDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/current/api-doc//Protocols/SASKeychainDelegate.html)
+ * [SASNetworkDelegate](https://developer.sas.com/sdk/mobile/iOS/doc/current/api-doc//Protocols/SASNetworkDelegate.html)
     
