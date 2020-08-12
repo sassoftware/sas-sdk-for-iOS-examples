@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SASKitServerConfig/SASKitServerConfig.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:saskit-navigation/SASKit-Navigation.xcodeproj">
    </FileRef>
    <FileRef
@@ -18,5 +15,8 @@
    </FileRef>
    <FileRef
       location = "group:SASKitMasterDetail/SASKitMasterDetail.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:corona-virus/corona-virus.xcodeproj">
    </FileRef>
 </Workspace>

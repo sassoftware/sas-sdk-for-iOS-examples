@@ -72,6 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate
                     if report != nil
                     {
                         let vc : SASReportViewController = (report?.createViewController(nil))!
+                        vc.isTrayEnabled = false
                         self.window?.rootViewController = vc as? UIViewController;
                     }
                     else

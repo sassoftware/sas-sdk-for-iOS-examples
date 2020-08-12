@@ -14,10 +14,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36796AC81E65D76700084650"
-               BuildableName = "SASKitCustomApp.app"
-               BlueprintName = "SASKitCustomApp"
-               ReferencedContainer = "container:SASKitCustomApp.xcodeproj">
+               BlueprintIdentifier = "69370B9A1E0712DE000D36DF"
+               BuildableName = "SASKit.framework"
+               BlueprintName = "SASKit"
+               ReferencedContainer = "container:../SASBIKit/Projects/SASKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6BBFF3512429135300AE860A"
+               BuildableName = "Tracker.app"
+               BlueprintName = "corona-virus"
+               ReferencedContainer = "container:corona-virus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,16 +41,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36796AC81E65D76700084650"
-            BuildableName = "SASKitCustomApp.app"
-            BlueprintName = "SASKitCustomApp"
-            ReferencedContainer = "container:SASKitCustomApp.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6B65D47524911A6C002846FA"
+               BuildableName = "TrackerUITests.xctest"
+               BlueprintName = "TrackerUITests"
+               ReferencedContainer = "container:corona-virus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -53,12 +68,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36796AC81E65D76700084650"
-            BuildableName = "SASKitCustomApp.app"
-            BlueprintName = "SASKitCustomApp"
-            ReferencedContainer = "container:SASKitCustomApp.xcodeproj">
+            BlueprintIdentifier = "6BBFF3512429135300AE860A"
+            BuildableName = "Tracker.app"
+            BlueprintName = "corona-virus"
+            ReferencedContainer = "container:corona-virus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "NETWORK_DATA_CAPTURE_PATH"
+            value = "${SRCROOT}/../test-ios/testware/network-capture/corona-virus"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -70,10 +92,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36796AC81E65D76700084650"
-            BuildableName = "SASKitCustomApp.app"
-            BlueprintName = "SASKitCustomApp"
-            ReferencedContainer = "container:SASKitCustomApp.xcodeproj">
+            BlueprintIdentifier = "6BBFF3512429135300AE860A"
+            BuildableName = "Tracker.app"
+            BlueprintName = "corona-virus"
+            ReferencedContainer = "container:corona-virus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
