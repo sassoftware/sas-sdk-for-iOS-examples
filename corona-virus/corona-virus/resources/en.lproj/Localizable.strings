@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  corona-virus
+
+  Created by Kerry Trout on 3/28/20.
+  Copyright © 2020 DVR. All rights reserved.
+*/
+
+"Legal Notices Title" = "About";
+"Close Button Label" = "Close";
+
+"Global Location Label" = "Worldwide";
+"Manage Locations Option" = "Manage Locations";
+"Legal Notices Option" = "About";
+"Send Feedback Option" = "Send Feedback";
+"Cancel Option" = "Cancel";
+"Apply Button" = "Apply";
+"Updating Message" = "Updating...";
+"Checking Updates Message" = "Checking for updates...";
+
+"SAS Logo Accessibility Label" = "SAS Logo";
+"Back Button Accessibility Label" = "Back";
+
+"Select Location Title" = "Enter Location";
+"Manage Locations Title" = "Manage Locations";
+
+// this is the title on the splash screen and should be all caps, if applicable,
+// when translated
+"Splash Screen Primary Title" = "COVID-19 TRACKER";
+"Splash Screen Icon Title" = "Powered by";
+"Splash Screen Marketing Text" = "With the right data and good decisions, the world can find clarity and strength in numbers.";
+
+"Add Location Button Accessibility Label" = "Add Location";
+"Add Location Button Accessibility Hint" = "Double tap to add a new location.";
+"Add Location Item Accessibility Hint" = "Double tap to add location.";
+"More Options Button Accessibility Label" = "More Options";
+"More Options Button Accessibility Hint" = "Double tap for more options.";
+"Visual Accessibility Hint" = "Double tap to explore the visual.";
+
+"Manage Locations Add Location Button Label" = "+ Add";
+"Manage Locations Add Location Button Accessibility Label" = "Add";
+"Manage Locations Add Location Button Accessibility Hint" = "Double tap to add a location.";
+"Manage Locations Apply Button Accessibility Hint" = "Double tap to apply changes.";

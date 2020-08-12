@@ -10,7 +10,7 @@ import UIKit
 import SASKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASReportViewControllerNavigationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASReportNavigationDelegate {
     var window: UIWindow?
     var server:SASServer?
     func handleSASManagerReady()
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASRe
                     { (report, error) in
                         guard let reportView = report?.createViewController(nil) else { return }
                         
-                        reportView.navigationDelegate = self
+                        report?.navigationDelegate = self
                         
                         if let navController = self.window?.rootViewController as? UINavigationController
                         {
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASRe
         server?.subscribe(descriptor: report, completion: { (report, error) in
             guard let reportView = report?.createViewController(nil, navigationDescriptor: navigationDescriptor) else { return }
             
-            reportView.navigationDelegate = self
+            report?.navigationDelegate = self
             
             if let navController = self.window?.rootViewController as? UINavigationController
             {
@@ -64,12 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SASManagerDelegate, SASRe
         })
     }
     
-    func willNavigate(page: Int, navigationDescriptor: SASReportNavigationDescriptor) {
-        
+    func navigate(page: Int, navigationDescriptor: SASReportNavigationDescriptor) {
     }
     
-    func didNavigate(page: Int, navigationDescriptor: SASReportNavigationDescriptor) {
-        
-    }
 }
 
