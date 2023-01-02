@@ -10,8 +10,6 @@ For information, advice, and questions on the use of SAS SDKs please start with 
 
 ## Open XCode Workspace
 
->NOTE: Because Swift does not yet have ABI compatibility, we are required to package the swift runtime with the built framework. This means that consumers of the framework must compile apps that use the framework with the same swift version as was used for compiling the framework. For release 8.22, the framework was built with Xcode 9.2 (9C40b).
-
 Once the SASKit framework is installed you can open SASKit-Samples.xcworkspace in XCode and build each of the projects to run on device simulators right away.
 
 In order to build for a physical device, the bundle ID for the projects need to be changed from "com.your-domain.<appname>" to use the domain specified in your developer account. Wildcard apps (com.your-domain.*) or specific apps for each of the samples (com.your-domain.<appname>) can be set up at developer.apple.com under your organizations' developer account. Also, the signing ID for the projects will need to be configured in order to build to run on a device.
